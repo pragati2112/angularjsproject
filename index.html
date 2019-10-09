@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="myModule">
+
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container" ng-controller="myController">
+    <div ui-view>
+        <div ng-repeat="school in schools">
+            {{school['name of school']}} | {{school['district']}}
+        </div>
+   </div>
+</div>
+
+<div>
+ 
+</div>
+
+</body>
+</html>
